@@ -40,7 +40,7 @@ class PageViewBuilderServiceProvider extends ServiceProvider
         $instance = new Page($this->app->make(Request::class), $this->app->make(ResponseFactory::class));
 
         $this->app->instance(AbstractPage::class, $instance);
-        $this->app->instance(AbstractPage::class, $instance);
+        $this->app->instance(PageViewBuilder::class, $instance);
     }
 
     protected function loadConfiguration(): void
