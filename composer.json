@@ -1,0 +1,40 @@
+{
+  "name": "jpeters/laravel-page-view",
+  "description": "Laravel Page View Builder",
+  "type": "library",
+  "version": "0.1.0",
+  "license": "MIT",
+  "require": {
+    "laravel/framework": "^7.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "5.1.0",
+    "phpunit/phpunit": "^9.0",
+    "spatie/phpunit-snapshot-assertions": "^4.1"
+  },
+  "authors": [
+    {
+      "name": "jamie peters",
+      "email": "jamie@jamie-peters.co.uk"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "JPeters\\PageViewBuilder\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JPeters\\PageViewBuilder\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "JPeters\\PageViewBuilder\\PageViewBuilderServiceProvider"
+      ]
+    }
+  }
+}

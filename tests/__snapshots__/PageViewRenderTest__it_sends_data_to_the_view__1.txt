@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <title>Laravel Page Builder - Easily Craft Your Views!  </title>
+
+<meta name="description" content="Laravel Page Builder - Build your views and meta information easily"/>
+<meta name="keywords" content="page builder"/>
+
+<link rel="canonical" href="http://localhost"/>
+
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:site_name" content="Laravel"/>
+    <meta property="og:description" content="Laravel Page Builder - Build your views and meta information easily"/>
+    <meta property="og:title" content="Laravel Page Builder - Easily Craft Your Views!  "/>
+    <meta property="og:image" content="page-builder.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:url" content="http://localhost"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description" content="Laravel Page Builder - Build your views and meta information easily"/>
+    <meta name="twitter:title" content="Laravel Page Builder - Easily Craft Your Views!  "/>
+    <meta name="twitter:site" content=""/>
+    <meta name="twitter:domain" content="Laravel"/>
+    <meta name="twitter:image:src" content="page-builder.jpg"/>
+    <meta name="twitter:creator" content=""/>
+</head>
+
+<body>
+<h1>Hello World</h1>
+<ul>
+            <li>foo</li>
+            <li>bar</li>
+            <li>baz</li>
+    </ul>
+</body>
+</html>
