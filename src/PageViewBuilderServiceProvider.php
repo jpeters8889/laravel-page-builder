@@ -15,15 +15,38 @@ class PageViewBuilderServiceProvider extends ServiceProvider
 
     public function register()
     {
-        if (!$this->app->configurationIsCached()) {
-            $this->mergeConfigFrom(__DIR__ . '/../config/laravel-page-view.php', 'laravel-page-view');
-        }
+        $this->loadConfiguration();
 
+        $this->bindInstances();
+
+        if ($this->app->runningInConsole()) {
+            $this->registerPublishCommands();
+        }
+    }
+
+    protected function registerPublishCommands(): void
+    {
+        $this->publishes([
+            __DIR__ . '/../config/laravel-page-view.php' => config_path('laravel-page-view.php'),
+        ], 'laravel-page-view-config');
+
+        $this->publishes([
+            __DIR__ . '/../public' => public_path('vendor/page-view-builder'),
+        ], 'laravel-page-view-template');
+    }
+
+    protected function bindInstances(): void
+    {
         $instance = new Page($this->app->make(Request::class), $this->app->make(ResponseFactory::class));
 
         $this->app->instance(AbstractPage::class, $instance);
         $this->app->instance(AbstractPage::class, $instance);
+    }
 
-        $this->publishes([__DIR__ . '/../public' => public_path('vendor/page-view-builder')]);
+    protected function loadConfiguration(): void
+    {
+        if (!$this->app->configurationIsCached()) {
+            $this->mergeConfigFrom(__DIR__ . '/../config/laravel-page-view.php', 'laravel-page-view');
+        }
     }
 }
