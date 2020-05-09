@@ -62,10 +62,10 @@ class Page extends AbstractPage
     protected function makeTitleForOutput()
     {
         if (!$this->title) {
-            return config('laravel-page-builder.title-full');
+            return $this->configuration['title']['full'];
         }
 
-        return $this->title . ' ' . config('laravel-page-builder.title-separator') . ' ' . config('laravel-page-builder.title-short');
+        return $this->title . ' ' . $this->configuration['title']['separator'] . ' ' . $this->configuration['title']['short'];
     }
 
     public function setSocialImage($image): Page
