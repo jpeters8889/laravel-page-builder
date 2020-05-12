@@ -3,7 +3,7 @@
 namespace JPeters\PageViewBuilder\Tests;
 
 use Illuminate\Foundation\Application;
-use JPeters\PageViewBuilder\Providers\PageViewBuilderServiceProvider;
+use JPeters\PageViewBuilder\PageViewBuilderServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 class TestCase extends OrchestraTestCase

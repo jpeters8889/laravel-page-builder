@@ -61,8 +61,8 @@ class Page extends AbstractPage
 
     protected function makeTitleForOutput()
     {
-        if (!$this->title) {
-            return $this->configuration['title']['full'];
+        if ($this->title === $this->configuration['title']['full']) {
+            return $this->title;
         }
 
         return $this->title . ' ' . $this->configuration['title']['separator'] . ' ' . $this->configuration['title']['short'];
