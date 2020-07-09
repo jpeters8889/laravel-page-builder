@@ -11,10 +11,7 @@ class PageViewBuilderServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__ . '/../views', 'page-view-builder');
-    }
 
-    public function boot()
-    {
         $this->bindInstances();
     }
 
