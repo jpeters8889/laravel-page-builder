@@ -13,11 +13,14 @@ class PageViewBuilderServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../views', 'page-view-builder');
     }
 
+    public function boot()
+    {
+        $this->bindInstances();
+    }
+
     public function register()
     {
         $this->loadConfiguration();
-
-        $this->bindInstances();
 
         if ($this->app->runningInConsole()) {
             $this->registerPublishCommands();
