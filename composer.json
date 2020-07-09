@@ -2,7 +2,6 @@
   "name": "jpeters/laravel-page-view",
   "description": "Laravel Page View Builder",
   "type": "library",
-  "version": "0.1.0",
   "license": "MIT",
   "require": {
     "laravel/framework": "^7.0"
